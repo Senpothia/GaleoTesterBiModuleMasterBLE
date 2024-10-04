@@ -386,10 +386,12 @@ channel_FVR 31
 [v _getCharacterFormRx getCharacterFormRx `(uc  1 e 1 0 ]
 "1309
 [v _getBLEindentifier getBLEindentifier `(v  1 e 1 0 ]
-"1320
+"1324
 [v _setCharacterBit setCharacterBit `(uc  1 e 1 0 ]
-"1338
+"1342
 [v _waitForBleAcq waitForBleAcq `(v  1 e 1 0 ]
+"1353
+[v _analyseCodeBLE analyseCodeBLE `(a  1 e 1 0 ]
 "213 C:\Users\Michel\MPLABXProjects\galeoTesterBiModuleMasterBLE.X/mcc_generated_files/i2c_master.h
 [v _MSSP_InterruptHandler MSSP_InterruptHandler `*.37(v  1 e 2 0 ]
 [s S552 . 1 `uc 1 IOCIF 1 0 :1:0 
@@ -409,7 +411,7 @@ channel_FVR 31
 ]
 [u S566 . 1 `S552 1 . 1 0 `S561 1 . 1 0 ]
 [v _INTCONbits INTCONbits `VES566  1 e 1 @11 ]
-[s S1999 . 1 `uc 1 RB0 1 0 :1:0 
+[s S2003 . 1 `uc 1 RB0 1 0 :1:0 
 `uc 1 RB1 1 0 :1:1 
 `uc 1 RB2 1 0 :1:2 
 `uc 1 RB3 1 0 :1:3 
@@ -419,8 +421,8 @@ channel_FVR 31
 `uc 1 RB7 1 0 :1:7 
 ]
 "509
-[u S2008 . 1 `S1999 1 . 1 0 ]
-[v _PORTBbits PORTBbits `VES2008  1 e 1 @13 ]
+[u S2012 . 1 `S2003 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES2012  1 e 1 @13 ]
 [s S1367 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
@@ -433,7 +435,7 @@ channel_FVR 31
 "571
 [u S1376 . 1 `S1367 1 . 1 0 ]
 [v _PORTCbits PORTCbits `VES1376  1 e 1 @14 ]
-[s S1906 . 1 `uc 1 RD0 1 0 :1:0 
+[s S1910 . 1 `uc 1 RD0 1 0 :1:0 
 `uc 1 RD1 1 0 :1:1 
 `uc 1 RD2 1 0 :1:2 
 `uc 1 RD3 1 0 :1:3 
@@ -443,8 +445,8 @@ channel_FVR 31
 `uc 1 RD7 1 0 :1:7 
 ]
 "633
-[u S1915 . 1 `S1906 1 . 1 0 ]
-[v _PORTDbits PORTDbits `VES1915  1 e 1 @15 ]
+[u S1919 . 1 `S1910 1 . 1 0 ]
+[v _PORTDbits PORTDbits `VES1919  1 e 1 @15 ]
 [s S596 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
@@ -589,14 +591,14 @@ channel_FVR 31
 [v _LATD LATD `VEuc  1 e 1 @271 ]
 "2614
 [v _LATE LATE `VEuc  1 e 1 @272 ]
-[s S1927 . 1 `uc 1 LATE0 1 0 :1:0 
+[s S1931 . 1 `uc 1 LATE0 1 0 :1:0 
 `uc 1 LATE1 1 0 :1:1 
 `uc 1 LATE2 1 0 :1:2 
 `uc 1 LATE3 1 0 :1:3 
 ]
 "2627
-[u S1932 . 1 `S1927 1 . 1 0 ]
-[v _LATEbits LATEbits `VES1932  1 e 1 @272 ]
+[u S1936 . 1 `S1931 1 . 1 0 ]
+[v _LATEbits LATEbits `VES1936  1 e 1 @272 ]
 "2924
 [v _BORCON BORCON `VEuc  1 e 1 @278 ]
 "3273
@@ -812,7 +814,7 @@ channel_FVR 31
 [v _main main `(v  1 e 1 0 ]
 {
 "507
-[v main@buffer_1765 buffer `i  1 a 2 23 ]
+[v main@buffer_1770 buffer `i  1 a 2 23 ]
 "467
 [v main@buffer buffer `i  1 a 2 21 ]
 "101
@@ -843,12 +845,12 @@ channel_FVR 31
 [v main@pap pap `a  1 a 1 31 ]
 "96
 [v main@master master `a  1 a 1 25 ]
-"785
+"783
 } 0
-"1338 C:\Users\Michel\MPLABXProjects\galeoTesterBiModuleMasterBLE.X\tester.c
+"1342 C:\Users\Michel\MPLABXProjects\galeoTesterBiModuleMasterBLE.X\tester.c
 [v _waitForBleAcq waitForBleAcq `(v  1 e 1 0 ]
 {
-"1347
+"1351
 } 0
 "1263
 [v _startPhaseBLE startPhaseBLE `(v  1 e 1 0 ]
@@ -863,9 +865,9 @@ channel_FVR 31
 [v _sprintf sprintf `(i  1 e 2 0 ]
 {
 [v sprintf@s s `*.6uc  1 a 1 wreg ]
-[s S2903 _IO_FILE 5 `*.6uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
+[s S2909 _IO_FILE 5 `*.6uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
 "13
-[v sprintf@f f `S2903  1 a 5 21 ]
+[v sprintf@f f `S2909  1 a 5 21 ]
 "11
 [v sprintf@ret ret `i  1 a 2 17 ]
 "12
@@ -891,11 +893,11 @@ channel_FVR 31
 {
 [v processActionForSlave@autom autom `*.6a  1 a 1 wreg ]
 "1239
-[v processActionForSlave@responseSlave_2376 responseSlave `uc  1 a 1 25 ]
+[v processActionForSlave@responseSlave_2380 responseSlave `uc  1 a 1 25 ]
 "1217
-[v processActionForSlave@responseSlave_2369 responseSlave `uc  1 a 1 24 ]
+[v processActionForSlave@responseSlave_2373 responseSlave `uc  1 a 1 24 ]
 "1205
-[v processActionForSlave@echo_2367 echo `uc  1 a 1 23 ]
+[v processActionForSlave@echo_2371 echo `uc  1 a 1 23 ]
 "1168
 [v processActionForSlave@responseSlave responseSlave `uc  1 a 1 22 ]
 "1160
@@ -938,12 +940,12 @@ channel_FVR 31
 {
 [v getBLEindentifier@bleCode bleCode `*.6uc  1 a 1 wreg ]
 "1311
-[v getBLEindentifier@i i `i  1 a 2 20 ]
+[v getBLEindentifier@i i `i  1 a 2 19 ]
 "1309
 [v getBLEindentifier@bleCode bleCode `*.6uc  1 a 1 wreg ]
 "1311
-[v getBLEindentifier@bleCode bleCode `*.6uc  1 a 1 19 ]
-"1318
+[v getBLEindentifier@bleCode bleCode `*.6uc  1 a 1 21 ]
+"1322
 } 0
 "1284
 [v _releaseCLK releaseCLK `(v  1 e 1 0 ]
@@ -961,16 +963,16 @@ channel_FVR 31
 [v getCharacterFormRx@N N `uc  1 a 1 14 ]
 "1307
 } 0
-"1320
+"1324
 [v _setCharacterBit setCharacterBit `(uc  1 e 1 0 ]
 {
 [v setCharacterBit@N N `uc  1 a 1 wreg ]
 [v setCharacterBit@N N `uc  1 a 1 wreg ]
 [v setCharacterBit@reading reading `i  1 p 2 3 ]
 [v setCharacterBit@K K `i  1 p 2 5 ]
-"1323
+"1327
 [v setCharacterBit@N N `uc  1 a 1 8 ]
-"1336
+"1340
 } 0
 "1276
 [v _activeCLK activeCLK `(v  1 e 1 0 ]
@@ -981,7 +983,7 @@ channel_FVR 31
 [v _displayManagerMaster displayManagerMaster `(v  1 e 1 0 ]
 {
 [v displayManagerMaster@s1 s1 `*.25uc  1 p 2 24 ]
-[v displayManagerMaster@s2 s2 `*.25uc  1 p 2 26 ]
+[v displayManagerMaster@s2 s2 `*.26uc  1 p 2 26 ]
 [v displayManagerMaster@s3 s3 `*.26uc  1 p 2 28 ]
 [v displayManagerMaster@s4 s4 `*.25uc  1 p 2 30 ]
 "28
@@ -991,15 +993,15 @@ channel_FVR 31
 {
 [v attenteDemarrage3@autom autom `*.6a  1 a 1 wreg ]
 "662
-[v attenteDemarrage3@responseSlave_2169 responseSlave `uc  1 a 1 33 ]
+[v attenteDemarrage3@responseSlave_2173 responseSlave `uc  1 a 1 33 ]
 "637
-[v attenteDemarrage3@responseSlave_2162 responseSlave `uc  1 a 1 32 ]
+[v attenteDemarrage3@responseSlave_2166 responseSlave `uc  1 a 1 32 ]
 "613
-[v attenteDemarrage3@responseSlave_2159 responseSlave `uc  1 a 1 31 ]
+[v attenteDemarrage3@responseSlave_2163 responseSlave `uc  1 a 1 31 ]
 "590
-[v attenteDemarrage3@responseSlave_2156 responseSlave `uc  1 a 1 30 ]
+[v attenteDemarrage3@responseSlave_2160 responseSlave `uc  1 a 1 30 ]
 "567
-[v attenteDemarrage3@responseSlave_2153 responseSlave `uc  1 a 1 29 ]
+[v attenteDemarrage3@responseSlave_2157 responseSlave `uc  1 a 1 29 ]
 "542
 [v attenteDemarrage3@responseSlave responseSlave `uc  1 a 1 28 ]
 "695
@@ -1087,7 +1089,16 @@ channel_FVR 31
 [v getSlaveStatus@code code `uc  1 a 1 4 ]
 "33
 } 0
-"759 C:\Users\Michel\MPLABXProjects\galeoTesterBiModuleMasterBLE.X\tester.c
+"1353 C:\Users\Michel\MPLABXProjects\galeoTesterBiModuleMasterBLE.X\tester.c
+[v _analyseCodeBLE analyseCodeBLE `(a  1 e 1 0 ]
+{
+[v analyseCodeBLE@bleCode bleCode `*.6uc  1 a 1 wreg ]
+[v analyseCodeBLE@bleCode bleCode `*.6uc  1 a 1 wreg ]
+"1355
+[v analyseCodeBLE@bleCode bleCode `*.6uc  1 a 1 3 ]
+"1366
+} 0
+"759
 [v _alerteDefautEtape16 alerteDefautEtape16 `(v  1 e 1 0 ]
 {
 "761
@@ -1102,9 +1113,9 @@ channel_FVR 31
 [v alerteDefautEtape16@testVoy testVoy `*.6a  1 p 1 58 ]
 [v alerteDefautEtape16@autom autom `*.6a  1 p 1 59 ]
 [v alerteDefautEtape16@prog prog `*.6a  1 p 1 60 ]
-[v alerteDefautEtape16@F3852 F3852 `[20]uc  1 s 20 F3852 ]
+[v alerteDefautEtape16@F3854 F3854 `[20]uc  1 s 20 F3854 ]
 "761
-[v alerteDefautEtape16@F3854 F3854 `[10]uc  1 s 10 F3854 ]
+[v alerteDefautEtape16@F3856 F3856 `[10]uc  1 s 10 F3856 ]
 "806
 } 0
 "104
@@ -1267,9 +1278,9 @@ channel_FVR 31
 [v alerteDefaut@etape etape `*.25uc  1 p 2 16 ]
 [v alerteDefaut@testAct testAct `*.39a  1 p 2 18 ]
 [v alerteDefaut@testVoy testVoy `*.39a  1 p 2 20 ]
-[v alerteDefaut@F3793 F3793 `[20]uc  1 s 20 F3793 ]
+[v alerteDefaut@F3795 F3795 `[20]uc  1 s 20 F3795 ]
 "224
-[v alerteDefaut@F3795 F3795 `[10]uc  1 s 10 F3795 ]
+[v alerteDefaut@F3797 F3797 `[10]uc  1 s 10 F3797 ]
 "242
 } 0
 "3 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\strcat.c
@@ -1303,42 +1314,42 @@ channel_FVR 31
 "1390 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\doprnt.c
 [v _vfprintf vfprintf `(i  1 e 2 0 ]
 {
-[s S2929 _IO_FILE 0 ]
-[v vfprintf@fp fp `*.4S2929  1 a 1 wreg ]
+[s S2935 _IO_FILE 0 ]
+[v vfprintf@fp fp `*.4S2935  1 a 1 wreg ]
 "1393
 [v vfprintf@cfmt cfmt `*.26uc  1 a 2 11 ]
 "1390
-[v vfprintf@fp fp `*.4S2929  1 a 1 wreg ]
+[v vfprintf@fp fp `*.4S2935  1 a 1 wreg ]
 [v vfprintf@fmt fmt `*.26DCuc  1 p 2 68 ]
 [v vfprintf@ap ap `*.4*.4v  1 p 1 70 ]
 "1395
 "1390
-[v vfprintf@fp fp `*.4S2929  1 a 1 10 ]
+[v vfprintf@fp fp `*.4S2935  1 a 1 10 ]
 "1404
 } 0
 "692
 [v _vfpfcnvrt vfpfcnvrt `(i  1 s 2 vfpfcnvrt ]
 {
-[s S2929 _IO_FILE 0 ]
-[v vfpfcnvrt@fp fp `*.4S2929  1 a 1 wreg ]
+[s S2935 _IO_FILE 0 ]
+[v vfpfcnvrt@fp fp `*.4S2935  1 a 1 wreg ]
 "696
 [v vfpfcnvrt@ll ll `o  1 a 8 0 ]
 "699
 [v vfpfcnvrt@vp vp `*.4v  1 a 1 8 ]
 "692
-[v vfpfcnvrt@fp fp `*.4S2929  1 a 1 wreg ]
+[v vfpfcnvrt@fp fp `*.4S2935  1 a 1 wreg ]
 [v vfpfcnvrt@fmt fmt `*.4*.26uc  1 p 1 61 ]
 [v vfpfcnvrt@ap ap `*.4*.4v  1 p 1 62 ]
 "702
 "692
-[v vfpfcnvrt@fp fp `*.4S2929  1 a 1 9 ]
+[v vfpfcnvrt@fp fp `*.4S2935  1 a 1 9 ]
 "1387
 } 0
 "287
 [v _dtoa dtoa `(i  1 s 2 dtoa ]
 {
-[s S2929 _IO_FILE 0 ]
-[v dtoa@fp fp `*.4S2929  1 a 1 wreg ]
+[s S2935 _IO_FILE 0 ]
+[v dtoa@fp fp `*.4S2935  1 a 1 wreg ]
 "290
 [v dtoa@n n `o  1 a 8 51 ]
 "289
@@ -1347,28 +1358,28 @@ channel_FVR 31
 [v dtoa@w w `i  1 a 2 47 ]
 [v dtoa@p p `i  1 a 2 45 ]
 "287
-[v dtoa@fp fp `*.4S2929  1 a 1 wreg ]
+[v dtoa@fp fp `*.4S2935  1 a 1 wreg ]
 [v dtoa@d d `o  1 p 8 31 ]
 "293
 "287
-[v dtoa@fp fp `*.4S2929  1 a 1 42 ]
+[v dtoa@fp fp `*.4S2935  1 a 1 42 ]
 "328
 } 0
 "72
 [v _pad pad `(i  1 s 2 pad ]
 {
-[s S2929 _IO_FILE 0 ]
-[v pad@fp fp `*.4S2929  1 a 1 wreg ]
+[s S2935 _IO_FILE 0 ]
+[v pad@fp fp `*.4S2935  1 a 1 wreg ]
 "74
 [v pad@w w `i  1 a 2 28 ]
 [v pad@i i `i  1 a 2 26 ]
 "72
-[v pad@fp fp `*.4S2929  1 a 1 wreg ]
+[v pad@fp fp `*.4S2935  1 a 1 wreg ]
 [v pad@buf buf `*.6uc  1 p 1 22 ]
 [v pad@p p `i  1 p 2 23 ]
 "77
 "72
-[v pad@fp fp `*.4S2929  1 a 1 30 ]
+[v pad@fp fp `*.4S2935  1 a 1 30 ]
 "95
 } 0
 "5 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\strlen.c
@@ -1390,8 +1401,8 @@ channel_FVR 31
 [v fputs@c c `uc  1 a 1 18 ]
 "8
 [v fputs@s s `*.6DCuc  1 a 1 wreg ]
-[s S2903 _IO_FILE 5 `*.6uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
-[v fputs@fp fp `*.4S2903  1 p 1 14 ]
+[s S2909 _IO_FILE 5 `*.6uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
+[v fputs@fp fp `*.4S2909  1 p 1 14 ]
 "13
 [v fputs@s s `*.6DCuc  1 a 1 21 ]
 "19
@@ -1400,8 +1411,8 @@ channel_FVR 31
 [v _fputc fputc `(i  1 e 2 0 ]
 {
 [v fputc@c c `i  1 p 2 6 ]
-[s S2903 _IO_FILE 5 `*.6uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
-[v fputc@fp fp `*.4S2903  1 p 1 8 ]
+[s S2909 _IO_FILE 5 `*.6uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
+[v fputc@fp fp `*.4S2909  1 p 1 8 ]
 "24
 } 0
 "201 C:\Users\Michel\MPLABXProjects\galeoTesterBiModuleMasterBLE.X\mcc_generated_files/eusart.c
@@ -1498,7 +1509,7 @@ channel_FVR 31
 [v _displayManager displayManager `(v  1 e 1 0 ]
 {
 [v displayManager@s1 s1 `*.25uc  1 p 2 14 ]
-[v displayManager@s2 s2 `*.25uc  1 p 2 16 ]
+[v displayManager@s2 s2 `*.26uc  1 p 2 16 ]
 [v displayManager@s3 s3 `*.26uc  1 p 2 18 ]
 [v displayManager@s4 s4 `*.25uc  1 p 2 20 ]
 "21

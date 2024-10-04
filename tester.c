@@ -1265,9 +1265,9 @@ void startPhaseBLE(int phase) {
     for (int i = 0; i < phase; i++) {
 
         C1_SetHigh();
-        __delay_ms(20);
+        __delay_ms(HALF_PERIOD_TRANSMISSION_MS);
         C1_SetLow();
-        __delay_ms(20);
+        __delay_ms(HALF_PERIOD_TRANSMISSION_MS);
     }
     C1_SetLow();
 
@@ -1276,7 +1276,7 @@ void startPhaseBLE(int phase) {
 void activeCLK() {
 
     C1_SetLow();
-    __delay_ms(20);
+    __delay_ms(HALF_PERIOD_TRANSMISSION_MS);
     C1_SetHigh();
 
 }
@@ -1284,7 +1284,7 @@ void activeCLK() {
 void releaseCLK() {
 
     C1_SetLow();
-    __delay_ms(20); // 20->10ms
+    __delay_ms(HALF_PERIOD_TRANSMISSION_MS); // 20->10ms
 
 }
 
@@ -1296,10 +1296,10 @@ char getCharacterFormRx() {
     for (int i = 7; i > -1; i--) {
 
         activeCLK();
-        __delay_ms(10);
+        __delay_ms(HALF_PERIOD_TRANSMISSION_MS/2);
         reading = AN4_GetValue();
         N = setCharacterBit(N, reading, i);
-        __delay_ms(20);
+        //__delay_ms(HALF_PERIOD_TRANSMISSION_MS);
 
     }
 
@@ -1307,10 +1307,14 @@ char getCharacterFormRx() {
 }
 
 void getBLEindentifier(char * bleCode) {
-
+    
     for (int i = 0; i < NBRE_DIGIT_ACQ; i++) {
-
+        
         bleCode[i] = getCharacterFormRx();
+    }
+    if(bleCode[0] == '#'){
+        
+        bleCode[0] = 32;
     }
     bleCode[NBRE_DIGIT_ACQ - 1] = '\0';
     releaseCLK();
@@ -1344,4 +1348,19 @@ void waitForBleAcq() {
     }
 
     __delay_ms(40);
+}
+
+bool analyseCodeBLE(char * bleCode){
+    
+    if(bleCode[1] == 'B' && bleCode[2] == 'X'){
+    
+        return true;
+    }
+    
+    if(bleCode[1] == '0' && bleCode[2] == '0'){
+    
+        return false;
+    }
+    
+    return false;
 }

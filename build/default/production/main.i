@@ -5790,6 +5790,7 @@ void I2C_Slave_Init();
 
 
 
+
 void initialConditions(_Bool *, _Bool *, _Bool *, _Bool *);
 void pressBP1(_Bool active);
 void pressBP2(_Bool active);
@@ -5830,6 +5831,7 @@ char getCharacterFormRx();
 void getBLEindentifier(char *);
 char setCharacterBit(char N, int reading, int K);
 void waitForBleAcq();
+_Bool analyseCodeBLE(char *);
 # 58 "main.c" 2
 
 # 1 "./display.h" 1
@@ -6514,12 +6516,11 @@ void main(void) {
 
         if (testActif) {
 
-            displayManagerMaster("ETAPE 18", "TEST BLUETOOTH", "VOIR APPLI", "PRESSER OK / NOK");
+            displayManagerMaster("ETAPE 18", "TEST BLUETOOTH", "ACQUISITION EN COURS", "");
             activerTouche();
 
             _delay((unsigned long)((100)*(16000000/4000.0)));
             startPhaseBLE(2);
-
             waitForBleAcq();
             startPhaseBLE(3);
 
@@ -6527,13 +6528,13 @@ void main(void) {
             waitForBleAcq();
             getBLEindentifier(bleCode);
 
-            _delay((unsigned long)((1000)*(16000000/4000.0)));
-            displayManagerMaster("ETAPE 18", "TEST BLUETOOTH", bleCode, "PRESSER OK / NOK");
+            _delay((unsigned long)((100)*(16000000/4000.0)));
+            displayManagerMaster("ETAPE 18", "TEST BLUETOOTH", bleCode, "");
 
 
 
 
-            testVoyants = reponseOperateur(automatique);
+            testVoyants = analyseCodeBLE(bleCode);
 
 
             if (!testVoyants) {
@@ -6541,7 +6542,6 @@ void main(void) {
                 testActif = 0;
                 alerteDefaut("ETAPE 18", &testActif, &testVoyants);
                 sortieErreur(&automatique, &testActif, &testVoyants, &programmation);
-
                 _delay((unsigned long)((2000)*(16000000/4000.0)));
             } else {
 
@@ -6558,7 +6558,7 @@ void main(void) {
 
         if (testActif) {
 
-            displayManagerMaster("FIN DE TEST", "CONFORME", "RETIRER CARTE", "ATTENTE ACQUITTEMENT");
+            displayManagerMaster("TEST CONFORME", bleCode, "RETIRER CARTE", "ATTENTE ACQUITTEMENT");
             ledConforme(1);
             alimenter(0);
             okAlert();

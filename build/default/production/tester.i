@@ -5797,6 +5797,7 @@ void I2C_Slave_Init();
 
 
 
+
 void initialConditions(_Bool *, _Bool *, _Bool *, _Bool *);
 void pressBP1(_Bool active);
 void pressBP2(_Bool active);
@@ -5837,6 +5838,7 @@ char getCharacterFormRx();
 void getBLEindentifier(char *);
 char setCharacterBit(char N, int reading, int K);
 void waitForBleAcq();
+_Bool analyseCodeBLE(char *);
 # 12 "tester.c" 2
 
 # 1 "./display.h" 1
@@ -7201,10 +7203,10 @@ char getCharacterFormRx() {
     for (int i = 7; i > -1; i--) {
 
         activeCLK();
-        _delay((unsigned long)((10)*(16000000/4000.0)));
+        _delay((unsigned long)((20/2)*(16000000/4000.0)));
         reading = PORTBbits.RB3;
         N = setCharacterBit(N, reading, i);
-        _delay((unsigned long)((20)*(16000000/4000.0)));
+
 
     }
 
@@ -7216,6 +7218,10 @@ void getBLEindentifier(char * bleCode) {
     for (int i = 0; i < 20; i++) {
 
         bleCode[i] = getCharacterFormRx();
+    }
+    if(bleCode[0] == '#'){
+
+        bleCode[0] = 32;
     }
     bleCode[20 - 1] = '\0';
     releaseCLK();
@@ -7249,4 +7255,19 @@ void waitForBleAcq() {
     }
 
     _delay((unsigned long)((40)*(16000000/4000.0)));
+}
+
+_Bool analyseCodeBLE(char * bleCode){
+
+    if(bleCode[1] == 'B' && bleCode[2] == 'X'){
+
+        return 1;
+    }
+
+    if(bleCode[1] == '0' && bleCode[2] == '0'){
+
+        return 0;
+    }
+
+    return 0;
 }

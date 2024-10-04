@@ -723,12 +723,11 @@ void main(void) {
 
         if (testActif) {
 
-            displayManagerMaster("ETAPE 18", "TEST BLUETOOTH", "VOIR APPLI", "PRESSER OK / NOK");
+            displayManagerMaster("ETAPE 18", "TEST BLUETOOTH", "ACQUISITION EN COURS", LIGNE_VIDE);
             activerTouche();
             //printf("ATTENTE VALIDATION BLUETOOTH\r\n");
             __delay_ms(100);
             startPhaseBLE(2);
-            
             waitForBleAcq();
             startPhaseBLE(3);
            // Transmission code BLE
@@ -736,13 +735,13 @@ void main(void) {
             waitForBleAcq();
             getBLEindentifier(bleCode);
             
-            __delay_ms(1000);
-            displayManagerMaster("ETAPE 18", "TEST BLUETOOTH", bleCode, "PRESSER OK / NOK");
+            __delay_ms(100);
+            displayManagerMaster("ETAPE 18", "TEST BLUETOOTH", bleCode, LIGNE_VIDE);
             
             // Fin transmission code BLE
 
 
-            testVoyants = reponseOperateur(automatique);
+            testVoyants = analyseCodeBLE(bleCode);
             
            
             if (!testVoyants) {
@@ -750,7 +749,6 @@ void main(void) {
                 testActif = false;
                 alerteDefaut("ETAPE 18", &testActif, &testVoyants);
                 sortieErreur(&automatique, &testActif, &testVoyants, &programmation);
-                //initialConditions(&testActif, &testVoyants, &automatique);
                 __delay_ms(2000);
             } else {
 
@@ -767,7 +765,7 @@ void main(void) {
 
         if (testActif) {
 
-            displayManagerMaster("FIN DE TEST", "CONFORME", "RETIRER CARTE", ACQ);
+            displayManagerMaster("TEST CONFORME", bleCode, "RETIRER CARTE", ACQ);
             ledConforme(true);
             alimenter(false);
             okAlert();

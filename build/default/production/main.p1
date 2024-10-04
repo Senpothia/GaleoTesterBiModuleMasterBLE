@@ -68,64 +68,64 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2437
 [; ;C:\Program Files\Microchip\xc8\v2.32\pic\include\proc\pic16lf1939.h: 2437: extern volatile LATBbits_t LATBbits __attribute__((address(0x10D)));
 [v _LATBbits `VS120 ~T0 @X0 0 e@269 ]
-"31 ./tester.h
-[; ;./tester.h: 31: void attenteDemarrage3(_Bool *, _Bool *, _Bool *, _Bool *, _Bool *);
+"32 ./tester.h
+[; ;./tester.h: 32: void attenteDemarrage3(_Bool *, _Bool *, _Bool *, _Bool *, _Bool *);
 [v _attenteDemarrage3 `(v ~T0 @X0 0 ef5`*a`*a`*a`*a`*a ]
-"38
-[; ;./tester.h: 38: void startPhaseBLE(int);
+"39
+[; ;./tester.h: 39: void startPhaseBLE(int);
 [v _startPhaseBLE `(v ~T0 @X0 0 ef1`i ]
-"27
-[; ;./tester.h: 27: void startAlert(void);
+"28
+[; ;./tester.h: 28: void startAlert(void);
 [v _startAlert `(v ~T0 @X0 0 ef ]
-"15
-[; ;./tester.h: 15: void ledConforme(_Bool active);
-[v _ledConforme `(v ~T0 @X0 0 ef1`a ]
-"14
-[; ;./tester.h: 14: void ledNonConforme(_Bool active);
-[v _ledNonConforme `(v ~T0 @X0 0 ef1`a ]
 "16
-[; ;./tester.h: 16: void ledProgession(_Bool active);
+[; ;./tester.h: 16: void ledConforme(_Bool active);
+[v _ledConforme `(v ~T0 @X0 0 ef1`a ]
+"15
+[; ;./tester.h: 15: void ledNonConforme(_Bool active);
+[v _ledNonConforme `(v ~T0 @X0 0 ef1`a ]
+"17
+[; ;./tester.h: 17: void ledProgession(_Bool active);
 [v _ledProgession `(v ~T0 @X0 0 ef1`a ]
-"6
-[; ;./tester.h: 6: void pressBP1(_Bool active);
-[v _pressBP1 `(v ~T0 @X0 0 ef1`a ]
 "7
-[; ;./tester.h: 7: void pressBP2(_Bool active);
-[v _pressBP2 `(v ~T0 @X0 0 ef1`a ]
+[; ;./tester.h: 7: void pressBP1(_Bool active);
+[v _pressBP1 `(v ~T0 @X0 0 ef1`a ]
 "8
-[; ;./tester.h: 8: void alimenter(_Bool active);
-[v _alimenter `(v ~T0 @X0 0 ef1`a ]
+[; ;./tester.h: 8: void pressBP2(_Bool active);
+[v _pressBP2 `(v ~T0 @X0 0 ef1`a ]
 "9
-[; ;./tester.h: 9: _Bool testR1(_Bool active);
-[v _testR1 `(a ~T0 @X0 0 ef1`a ]
+[; ;./tester.h: 9: void alimenter(_Bool active);
+[v _alimenter `(v ~T0 @X0 0 ef1`a ]
 "10
-[; ;./tester.h: 10: _Bool testR2(_Bool active);
-[v _testR2 `(a ~T0 @X0 0 ef1`a ]
+[; ;./tester.h: 10: _Bool testR1(_Bool active);
+[v _testR1 `(a ~T0 @X0 0 ef1`a ]
 "11
-[; ;./tester.h: 11: _Bool testR3(_Bool active);
+[; ;./tester.h: 11: _Bool testR2(_Bool active);
+[v _testR2 `(a ~T0 @X0 0 ef1`a ]
+"12
+[; ;./tester.h: 12: _Bool testR3(_Bool active);
 [v _testR3 `(a ~T0 @X0 0 ef1`a ]
 "111 C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\stdio.h
 [v _printf `(i ~T0 @X0 0 ev`*Cuc ]
-"18 ./tester.h
-[; ;./tester.h: 18: void alerteDefaut(char etape[], _Bool *, _Bool *);
+"19 ./tester.h
+[; ;./tester.h: 19: void alerteDefaut(char etape[], _Bool *, _Bool *);
 [v _alerteDefaut `(v ~T0 @X0 0 ef3`*uc`*a`*a ]
-"33
-[; ;./tester.h: 33: void sortieErreur(_Bool *, _Bool *, _Bool *, _Bool *);
+"34
+[; ;./tester.h: 34: void sortieErreur(_Bool *, _Bool *, _Bool *, _Bool *);
 [v _sortieErreur `(v ~T0 @X0 0 ef4`*a`*a`*a`*a ]
 "7 ./I2C-tester.h
 [; ;./I2C-tester.h: 7: char getSlaveSummary();
 [v _getSlaveSummary `(uc ~T0 @X0 0 e? ]
-"35 ./tester.h
-[; ;./tester.h: 35: void processSlaveResponse(char repSlave, _Bool *);
+"36 ./tester.h
+[; ;./tester.h: 36: void processSlaveResponse(char repSlave, _Bool *);
 [v _processSlaveResponse `(v ~T0 @X0 0 ef2`uc`*a ]
-"37
-[; ;./tester.h: 37: unsigned char getRS232();
+"38
+[; ;./tester.h: 38: unsigned char getRS232();
 [v _getRS232 `(uc ~T0 @X0 0 e? ]
-"36
-[; ;./tester.h: 36: void processActionForSlave(_Bool *autom, _Bool *testAct, _Bool *prog, _Bool *testSlaveActive, unsigned char orderFromWin);
+"37
+[; ;./tester.h: 37: void processActionForSlave(_Bool *autom, _Bool *testAct, _Bool *prog, _Bool *testSlaveActive, unsigned char orderFromWin);
 [v _processActionForSlave `(v ~T0 @X0 0 ef5`*a`*a`*a`*a`uc ]
-"20
-[; ;./tester.h: 20: _Bool reponseOperateur(_Bool automatique);
+"21
+[; ;./tester.h: 21: _Bool reponseOperateur(_Bool automatique);
 [v _reponseOperateur `(a ~T0 @X0 0 ef1`a ]
 "466 main.c
 [; ;main.c: 466:             lectureAN1 = ADC_GetConversion(VIN1);
@@ -139,35 +139,38 @@ Version 4.0 HI-TECH Software Intermediate Code
 "23 ./display.h
 [; ;./display.h: 23: void displayManager(char s1[], char s2[], char s3[], char s4[]);
 [v _displayManager `(v ~T0 @X0 0 ef4`*uc`*uc`*uc`*uc ]
-"22 ./tester.h
-[; ;./tester.h: 22: void setHorloge(_Bool active);
+"23 ./tester.h
+[; ;./tester.h: 23: void setHorloge(_Bool active);
 [v _setHorloge `(v ~T0 @X0 0 ef1`a ]
-"23
-[; ;./tester.h: 23: void setP1(_Bool active);
-[v _setP1 `(v ~T0 @X0 0 ef1`a ]
-"19
-[; ;./tester.h: 19: void alerteDefautEtape16(char etape[], _Bool *, _Bool *, _Bool *, _Bool *);
-[v _alerteDefautEtape16 `(v ~T0 @X0 0 ef5`*uc`*a`*a`*a`*a ]
 "24
-[; ;./tester.h: 24: void setP2(_Bool active);
+[; ;./tester.h: 24: void setP1(_Bool active);
+[v _setP1 `(v ~T0 @X0 0 ef1`a ]
+"20
+[; ;./tester.h: 20: void alerteDefautEtape16(char etape[], _Bool *, _Bool *, _Bool *, _Bool *);
+[v _alerteDefautEtape16 `(v ~T0 @X0 0 ef5`*uc`*a`*a`*a`*a ]
+"25
+[; ;./tester.h: 25: void setP2(_Bool active);
 [v _setP2 `(v ~T0 @X0 0 ef1`a ]
-"26
-[; ;./tester.h: 26: void activerTouche(void);
+"27
+[; ;./tester.h: 27: void activerTouche(void);
 [v _activerTouche `(v ~T0 @X0 0 ef ]
-"44
-[; ;./tester.h: 44: void waitForBleAcq();
+"45
+[; ;./tester.h: 45: void waitForBleAcq();
 [v _waitForBleAcq `(v ~T0 @X0 0 e? ]
-"42
-[; ;./tester.h: 42: void getBLEindentifier(char *);
+"43
+[; ;./tester.h: 43: void getBLEindentifier(char *);
 [v _getBLEindentifier `(v ~T0 @X0 0 ef1`*uc ]
-"29
-[; ;./tester.h: 29: void okAlert(void);
+"46
+[; ;./tester.h: 46: _Bool analyseCodeBLE(char *);
+[v _analyseCodeBLE `(a ~T0 @X0 0 ef1`*uc ]
+"30
+[; ;./tester.h: 30: void okAlert(void);
 [v _okAlert `(v ~T0 @X0 0 ef ]
-"32
-[; ;./tester.h: 32: void attenteAquittement(_Bool *, _Bool *);
+"33
+[; ;./tester.h: 33: void attenteAquittement(_Bool *, _Bool *);
 [v _attenteAquittement `(v ~T0 @X0 0 ef2`*a`*a ]
-"5
-[; ;./tester.h: 5: void initialConditions(_Bool *, _Bool *, _Bool *, _Bool *);
+"6
+[; ;./tester.h: 6: void initialConditions(_Bool *, _Bool *, _Bool *, _Bool *);
 [v _initialConditions `(v ~T0 @X0 0 ef4`*a`*a`*a`*a ]
 "55 C:\Program Files\Microchip\xc8\v2.32\pic\include\proc\pic16lf1939.h
 [; ;C:\Program Files\Microchip\xc8\v2.32\pic\include\proc\pic16lf1939.h: 55: __asm("INDF0 equ 00h");
@@ -1999,7 +2002,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! != -> _testActif `i -> 0 `i 465  ]
 {
 "726
-[; ;main.c: 726:             displayManagerMaster("ETAPE 18", "TEST BLUETOOTH", "VOIR APPLI", "PRESSER OK / NOK");
+[; ;main.c: 726:             displayManagerMaster("ETAPE 18", "TEST BLUETOOTH", "ACQUISITION EN COURS", "");
 [e ( _displayManagerMaster (4 , , , :s 119C :s 120C :s 121C :s 122C ]
 "727
 [; ;main.c: 727:             activerTouche();
@@ -2010,118 +2013,118 @@ Version 4.0 HI-TECH Software Intermediate Code
 "730
 [; ;main.c: 730:             startPhaseBLE(2);
 [e ( _startPhaseBLE (1 -> 2 `i ]
+"731
+[; ;main.c: 731:             waitForBleAcq();
+[e ( _waitForBleAcq ..  ]
 "732
-[; ;main.c: 732:             waitForBleAcq();
-[e ( _waitForBleAcq ..  ]
-"733
-[; ;main.c: 733:             startPhaseBLE(3);
+[; ;main.c: 732:             startPhaseBLE(3);
 [e ( _startPhaseBLE (1 -> 3 `i ]
-"736
-[; ;main.c: 736:             waitForBleAcq();
+"735
+[; ;main.c: 735:             waitForBleAcq();
 [e ( _waitForBleAcq ..  ]
-"737
-[; ;main.c: 737:             getBLEindentifier(bleCode);
+"736
+[; ;main.c: 736:             getBLEindentifier(bleCode);
 [e ( _getBLEindentifier (1 &U _bleCode ]
+"738
+[; ;main.c: 738:             _delay((unsigned long)((100)*(16000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
 "739
-[; ;main.c: 739:             _delay((unsigned long)((1000)*(16000000/4000.0)));
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
-"740
-[; ;main.c: 740:             displayManagerMaster("ETAPE 18", "TEST BLUETOOTH", bleCode, "PRESSER OK / NOK");
+[; ;main.c: 739:             displayManagerMaster("ETAPE 18", "TEST BLUETOOTH", bleCode, "");
 [e ( _displayManagerMaster (4 , , , :s 123C :s 124C &U _bleCode :s 125C ]
-"745
-[; ;main.c: 745:             testVoyants = reponseOperateur(automatique);
-[e = _testVoyants ( _reponseOperateur (1 _automatique ]
-"748
-[; ;main.c: 748:             if (!testVoyants) {
+"744
+[; ;main.c: 744:             testVoyants = analyseCodeBLE(bleCode);
+[e = _testVoyants ( _analyseCodeBLE (1 &U _bleCode ]
+"747
+[; ;main.c: 747:             if (!testVoyants) {
 [e $ ! ! != -> _testVoyants `i -> 0 `i 466  ]
 {
-"750
-[; ;main.c: 750:                 testActif = 0;
+"749
+[; ;main.c: 749:                 testActif = 0;
 [e = _testActif -> -> 0 `i `a ]
-"751
-[; ;main.c: 751:                 alerteDefaut("ETAPE 18", &testActif, &testVoyants);
+"750
+[; ;main.c: 750:                 alerteDefaut("ETAPE 18", &testActif, &testVoyants);
 [e ( _alerteDefaut (3 , , :s 126C &U _testActif &U _testVoyants ]
-"752
-[; ;main.c: 752:                 sortieErreur(&automatique, &testActif, &testVoyants, &programmation);
+"751
+[; ;main.c: 751:                 sortieErreur(&automatique, &testActif, &testVoyants, &programmation);
 [e ( _sortieErreur (4 , , , &U _automatique &U _testActif &U _testVoyants &U _programmation ]
-"754
-[; ;main.c: 754:                 _delay((unsigned long)((2000)*(16000000/4000.0)));
+"752
+[; ;main.c: 752:                 _delay((unsigned long)((2000)*(16000000/4000.0)));
 [e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
-"755
-[; ;main.c: 755:             } else {
+"753
+[; ;main.c: 753:             } else {
 }
 [e $U 467  ]
 [e :U 466 ]
 {
-"757
-[; ;main.c: 757:                 printf("-> TEST:18:1");
+"755
+[; ;main.c: 755:                 printf("-> TEST:18:1");
 [e ( _printf :s 127C ]
-"758
-[; ;main.c: 758:             }
+"756
+[; ;main.c: 756:             }
 }
 [e :U 467 ]
-"759
-[; ;main.c: 759:         }
+"757
+[; ;main.c: 757:         }
 }
 [e :U 465 ]
-"761
-[; ;main.c: 761:         slaveSummary = getSlaveSummary();
+"759
+[; ;main.c: 759:         slaveSummary = getSlaveSummary();
 [e = _slaveSummary ( _getSlaveSummary ..  ]
-"762
-[; ;main.c: 762:         processSlaveResponse(slaveSummary, slaveWaiting);
+"760
+[; ;main.c: 760:         processSlaveResponse(slaveSummary, slaveWaiting);
 [e ( _processSlaveResponse (2 , _slaveSummary -> _slaveWaiting `*a ]
-"763
-[; ;main.c: 763:         orderFormWin = getRS232();
+"761
+[; ;main.c: 761:         orderFormWin = getRS232();
 [e = _orderFormWin -> ( _getRS232 ..  `uc ]
-"764
-[; ;main.c: 764:         processActionForSlave(&automatique, &testActif, &programmation, &slaveInTest, orderFormWin);
+"762
+[; ;main.c: 762:         processActionForSlave(&automatique, &testActif, &programmation, &slaveInTest, orderFormWin);
 [e ( _processActionForSlave (4 , , , , &U _automatique &U _testActif &U _programmation &U _slaveInTest -> _orderFormWin `uc ]
-"768
-[; ;main.c: 768:         if (testActif) {
+"766
+[; ;main.c: 766:         if (testActif) {
 [e $ ! != -> _testActif `i -> 0 `i 468  ]
 {
-"770
-[; ;main.c: 770:             displayManagerMaster("FIN DE TEST", "CONFORME", "RETIRER CARTE", "ATTENTE ACQUITTEMENT");
-[e ( _displayManagerMaster (4 , , , :s 128C :s 129C :s 130C :s 131C ]
-"771
-[; ;main.c: 771:             ledConforme(1);
+"768
+[; ;main.c: 768:             displayManagerMaster("TEST CONFORME", bleCode, "RETIRER CARTE", "ATTENTE ACQUITTEMENT");
+[e ( _displayManagerMaster (4 , , , :s 128C &U _bleCode :s 129C :s 130C ]
+"769
+[; ;main.c: 769:             ledConforme(1);
 [e ( _ledConforme (1 -> -> 1 `i `a ]
-"772
-[; ;main.c: 772:             alimenter(0);
+"770
+[; ;main.c: 770:             alimenter(0);
 [e ( _alimenter (1 -> -> 0 `i `a ]
-"773
-[; ;main.c: 773:             okAlert();
+"771
+[; ;main.c: 771:             okAlert();
 [e ( _okAlert ..  ]
-"774
-[; ;main.c: 774:             attenteAquittement(&automatique, &testActif);
+"772
+[; ;main.c: 772:             attenteAquittement(&automatique, &testActif);
 [e ( _attenteAquittement (2 , &U _automatique &U _testActif ]
-"775
-[; ;main.c: 775:             initialConditions(&testActif, &testVoyants, &automatique, &programmation);
+"773
+[; ;main.c: 773:             initialConditions(&testActif, &testVoyants, &automatique, &programmation);
 [e ( _initialConditions (4 , , , &U _testActif &U _testVoyants &U _automatique &U _programmation ]
-"777
-[; ;main.c: 777:             _delay((unsigned long)((2000)*(16000000/4000.0)));
+"775
+[; ;main.c: 775:             _delay((unsigned long)((2000)*(16000000/4000.0)));
 [e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
-"779
-[; ;main.c: 779:         }
+"777
+[; ;main.c: 777:         }
 }
 [e :U 468 ]
-"781
-[; ;main.c: 781:     }
+"779
+[; ;main.c: 779:     }
 }
 [e :U 391 ]
 [e $U 392  ]
 [e :U 393 ]
-"785
-[; ;main.c: 785: }
+"783
+[; ;main.c: 783: }
 [e :UE 384 ]
 }
-[p f _printf 8388608 ]
 [p f _sprintf 8388736 ]
+[p f _printf 8388608 ]
 [a 10C 77 97 115 116 101 114 32 101 110 32 116 101 115 116 0 ]
 [a 66C 37 100 0 ]
 [a 76C 37 100 0 ]
-[a 128C 70 73 78 32 68 69 32 84 69 83 84 0 ]
-[a 131C 65 84 84 69 78 84 69 32 65 67 81 85 73 84 84 69 77 69 78 84 0 ]
+[a 130C 65 84 84 69 78 84 69 32 65 67 81 85 73 84 84 69 77 69 78 84 0 ]
+[a 121C 65 67 81 85 73 83 73 84 73 79 78 32 69 78 32 67 79 85 82 83 0 ]
 [a 90C 76 69 68 83 32 65 76 76 85 77 69 69 83 0 ]
 [a 63C 84 69 83 84 32 76 69 68 32 67 76 65 86 73 69 82 0 ]
 [a 70C 84 69 83 84 32 76 69 68 32 67 76 65 86 73 69 82 0 ]
@@ -2132,12 +2135,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [a 51C 84 69 83 84 32 82 49 32 79 70 70 32 45 32 82 50 32 79 78 0 ]
 [a 45C 84 69 83 84 32 82 49 32 79 78 0 ]
 [a 91C 80 82 69 83 83 69 82 32 79 75 32 47 32 78 79 75 0 ]
-[a 122C 80 82 69 83 83 69 82 32 79 75 32 47 32 78 79 75 0 ]
-[a 125C 80 82 69 83 83 69 82 32 79 75 32 47 32 78 79 75 0 ]
 [a 4C 65 80 80 85 89 69 82 32 83 85 82 32 79 75 0 ]
 [a 8C 65 80 80 85 89 69 82 32 83 85 82 32 79 75 0 ]
 [a 12C 65 80 80 85 89 69 82 32 83 85 82 32 79 75 0 ]
-[a 121C 86 79 73 82 32 65 80 80 76 73 0 ]
 [a 120C 84 69 83 84 32 66 76 85 69 84 79 79 84 72 0 ]
 [a 124C 84 69 83 84 32 66 76 85 69 84 79 79 84 72 0 ]
 [a 83C 84 69 83 84 32 83 70 76 65 83 72 0 ]
@@ -2146,12 +2146,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 [a 33C 84 69 83 84 32 76 69 68 32 66 76 69 85 69 0 ]
 [a 39C 84 69 83 84 32 76 69 68 32 86 69 82 84 69 0 ]
 [a 89C 84 69 83 84 32 76 69 68 83 32 67 65 82 84 69 0 ]
-[a 130C 82 69 84 73 82 69 82 32 67 65 82 84 69 0 ]
+[a 129C 82 69 84 73 82 69 82 32 67 65 82 84 69 0 ]
 [a 3C 80 79 83 73 84 73 79 78 78 69 82 32 67 65 82 84 69 0 ]
 [a 7C 80 79 83 73 84 73 79 78 78 69 82 32 67 65 82 84 69 0 ]
 [a 11C 80 79 83 73 84 73 79 78 78 69 82 32 67 65 82 84 69 0 ]
 [a 2C 77 79 68 85 76 69 32 77 65 73 84 82 69 0 ]
-[a 129C 67 79 78 70 79 82 77 69 0 ]
+[a 128C 84 69 83 84 32 67 79 78 70 79 82 77 69 0 ]
 [a 26C 84 69 83 84 32 76 69 68 32 82 79 85 71 69 0 ]
 [a 102C 84 69 83 84 32 72 79 82 76 79 71 69 0 ]
 [a 74C 67 76 65 86 73 69 82 32 69 84 69 73 78 84 63 0 ]
@@ -2248,3 +2248,5 @@ Version 4.0 HI-TECH Software Intermediate Code
 [a 110C 0 ]
 [a 115C 0 ]
 [a 116C 0 ]
+[a 122C 0 ]
+[a 125C 0 ]

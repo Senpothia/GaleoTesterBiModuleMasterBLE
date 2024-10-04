@@ -1,6 +1,7 @@
 #define LIM_H 800  // 480 pour Vcc=3.3V
 #define LIM_L 700  // 480 pour Vcc=3.3V   // 700 pour D937
-#define NBRE_DIGIT_ACQ 20
+#define NBRE_DIGIT_ACQ 20  // longueur de la trâme de transmission code BLE
+# define HALF_PERIOD_TRANSMISSION_MS 20  // demi-periode de l'horloge maitre (ms)
 
 void initialConditions(bool *, bool *, bool *, bool *);
 void pressBP1(bool active);
@@ -42,6 +43,7 @@ char getCharacterFormRx();
 void getBLEindentifier(char *);
 char setCharacterBit(char N, int reading, int K);
 void waitForBleAcq();
+bool analyseCodeBLE(char *);
 
 
 
