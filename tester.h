@@ -1,5 +1,6 @@
 #define LIM_H 800  // 480 pour Vcc=3.3V
 #define LIM_L 700  // 480 pour Vcc=3.3V   // 700 pour D937
+#define NBRE_DIGIT_ACQ 20
 
 void initialConditions(bool *, bool *, bool *, bool *);
 void pressBP1(bool active);
@@ -37,9 +38,9 @@ unsigned char getRS232();
 void startPhaseBLE(int);
 void activeCLK();
 void releaseCLK();
-int getCharacterFormRx();
+char getCharacterFormRx();
 void getBLEindentifier(char *);
-char setCharacterBit(int N, int reading, int K);
+char setCharacterBit(char N, int reading, int K);
 void waitForBleAcq();
 
 

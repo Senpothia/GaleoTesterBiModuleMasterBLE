@@ -68,64 +68,64 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2437
 [; ;C:\Program Files\Microchip\xc8\v2.32\pic\include\proc\pic16lf1939.h: 2437: extern volatile LATBbits_t LATBbits __attribute__((address(0x10D)));
 [v _LATBbits `VS120 ~T0 @X0 0 e@269 ]
-"30 ./tester.h
-[; ;./tester.h: 30: void attenteDemarrage3(_Bool *, _Bool *, _Bool *, _Bool *, _Bool *);
+"31 ./tester.h
+[; ;./tester.h: 31: void attenteDemarrage3(_Bool *, _Bool *, _Bool *, _Bool *, _Bool *);
 [v _attenteDemarrage3 `(v ~T0 @X0 0 ef5`*a`*a`*a`*a`*a ]
-"37
-[; ;./tester.h: 37: void startPhaseBLE(int);
+"38
+[; ;./tester.h: 38: void startPhaseBLE(int);
 [v _startPhaseBLE `(v ~T0 @X0 0 ef1`i ]
-"26
-[; ;./tester.h: 26: void startAlert(void);
+"27
+[; ;./tester.h: 27: void startAlert(void);
 [v _startAlert `(v ~T0 @X0 0 ef ]
-"14
-[; ;./tester.h: 14: void ledConforme(_Bool active);
-[v _ledConforme `(v ~T0 @X0 0 ef1`a ]
-"13
-[; ;./tester.h: 13: void ledNonConforme(_Bool active);
-[v _ledNonConforme `(v ~T0 @X0 0 ef1`a ]
 "15
-[; ;./tester.h: 15: void ledProgession(_Bool active);
+[; ;./tester.h: 15: void ledConforme(_Bool active);
+[v _ledConforme `(v ~T0 @X0 0 ef1`a ]
+"14
+[; ;./tester.h: 14: void ledNonConforme(_Bool active);
+[v _ledNonConforme `(v ~T0 @X0 0 ef1`a ]
+"16
+[; ;./tester.h: 16: void ledProgession(_Bool active);
 [v _ledProgession `(v ~T0 @X0 0 ef1`a ]
-"5
-[; ;./tester.h: 5: void pressBP1(_Bool active);
-[v _pressBP1 `(v ~T0 @X0 0 ef1`a ]
 "6
-[; ;./tester.h: 6: void pressBP2(_Bool active);
-[v _pressBP2 `(v ~T0 @X0 0 ef1`a ]
+[; ;./tester.h: 6: void pressBP1(_Bool active);
+[v _pressBP1 `(v ~T0 @X0 0 ef1`a ]
 "7
-[; ;./tester.h: 7: void alimenter(_Bool active);
-[v _alimenter `(v ~T0 @X0 0 ef1`a ]
+[; ;./tester.h: 7: void pressBP2(_Bool active);
+[v _pressBP2 `(v ~T0 @X0 0 ef1`a ]
 "8
-[; ;./tester.h: 8: _Bool testR1(_Bool active);
-[v _testR1 `(a ~T0 @X0 0 ef1`a ]
+[; ;./tester.h: 8: void alimenter(_Bool active);
+[v _alimenter `(v ~T0 @X0 0 ef1`a ]
 "9
-[; ;./tester.h: 9: _Bool testR2(_Bool active);
-[v _testR2 `(a ~T0 @X0 0 ef1`a ]
+[; ;./tester.h: 9: _Bool testR1(_Bool active);
+[v _testR1 `(a ~T0 @X0 0 ef1`a ]
 "10
-[; ;./tester.h: 10: _Bool testR3(_Bool active);
+[; ;./tester.h: 10: _Bool testR2(_Bool active);
+[v _testR2 `(a ~T0 @X0 0 ef1`a ]
+"11
+[; ;./tester.h: 11: _Bool testR3(_Bool active);
 [v _testR3 `(a ~T0 @X0 0 ef1`a ]
 "111 C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\stdio.h
 [v _printf `(i ~T0 @X0 0 ev`*Cuc ]
-"17 ./tester.h
-[; ;./tester.h: 17: void alerteDefaut(char etape[], _Bool *, _Bool *);
+"18 ./tester.h
+[; ;./tester.h: 18: void alerteDefaut(char etape[], _Bool *, _Bool *);
 [v _alerteDefaut `(v ~T0 @X0 0 ef3`*uc`*a`*a ]
-"32
-[; ;./tester.h: 32: void sortieErreur(_Bool *, _Bool *, _Bool *, _Bool *);
+"33
+[; ;./tester.h: 33: void sortieErreur(_Bool *, _Bool *, _Bool *, _Bool *);
 [v _sortieErreur `(v ~T0 @X0 0 ef4`*a`*a`*a`*a ]
 "7 ./I2C-tester.h
 [; ;./I2C-tester.h: 7: char getSlaveSummary();
 [v _getSlaveSummary `(uc ~T0 @X0 0 e? ]
-"34 ./tester.h
-[; ;./tester.h: 34: void processSlaveResponse(char repSlave, _Bool *);
+"35 ./tester.h
+[; ;./tester.h: 35: void processSlaveResponse(char repSlave, _Bool *);
 [v _processSlaveResponse `(v ~T0 @X0 0 ef2`uc`*a ]
-"36
-[; ;./tester.h: 36: unsigned char getRS232();
+"37
+[; ;./tester.h: 37: unsigned char getRS232();
 [v _getRS232 `(uc ~T0 @X0 0 e? ]
-"35
-[; ;./tester.h: 35: void processActionForSlave(_Bool *autom, _Bool *testAct, _Bool *prog, _Bool *testSlaveActive, unsigned char orderFromWin);
+"36
+[; ;./tester.h: 36: void processActionForSlave(_Bool *autom, _Bool *testAct, _Bool *prog, _Bool *testSlaveActive, unsigned char orderFromWin);
 [v _processActionForSlave `(v ~T0 @X0 0 ef5`*a`*a`*a`*a`uc ]
-"19
-[; ;./tester.h: 19: _Bool reponseOperateur(_Bool automatique);
+"20
+[; ;./tester.h: 20: _Bool reponseOperateur(_Bool automatique);
 [v _reponseOperateur `(a ~T0 @X0 0 ef1`a ]
 "466 main.c
 [; ;main.c: 466:             lectureAN1 = ADC_GetConversion(VIN1);
@@ -139,35 +139,35 @@ Version 4.0 HI-TECH Software Intermediate Code
 "23 ./display.h
 [; ;./display.h: 23: void displayManager(char s1[], char s2[], char s3[], char s4[]);
 [v _displayManager `(v ~T0 @X0 0 ef4`*uc`*uc`*uc`*uc ]
-"21 ./tester.h
-[; ;./tester.h: 21: void setHorloge(_Bool active);
+"22 ./tester.h
+[; ;./tester.h: 22: void setHorloge(_Bool active);
 [v _setHorloge `(v ~T0 @X0 0 ef1`a ]
-"22
-[; ;./tester.h: 22: void setP1(_Bool active);
-[v _setP1 `(v ~T0 @X0 0 ef1`a ]
-"18
-[; ;./tester.h: 18: void alerteDefautEtape16(char etape[], _Bool *, _Bool *, _Bool *, _Bool *);
-[v _alerteDefautEtape16 `(v ~T0 @X0 0 ef5`*uc`*a`*a`*a`*a ]
 "23
-[; ;./tester.h: 23: void setP2(_Bool active);
+[; ;./tester.h: 23: void setP1(_Bool active);
+[v _setP1 `(v ~T0 @X0 0 ef1`a ]
+"19
+[; ;./tester.h: 19: void alerteDefautEtape16(char etape[], _Bool *, _Bool *, _Bool *, _Bool *);
+[v _alerteDefautEtape16 `(v ~T0 @X0 0 ef5`*uc`*a`*a`*a`*a ]
+"24
+[; ;./tester.h: 24: void setP2(_Bool active);
 [v _setP2 `(v ~T0 @X0 0 ef1`a ]
-"25
-[; ;./tester.h: 25: void activerTouche(void);
+"26
+[; ;./tester.h: 26: void activerTouche(void);
 [v _activerTouche `(v ~T0 @X0 0 ef ]
-"43
-[; ;./tester.h: 43: void waitForBleAcq();
+"44
+[; ;./tester.h: 44: void waitForBleAcq();
 [v _waitForBleAcq `(v ~T0 @X0 0 e? ]
-"41
-[; ;./tester.h: 41: void getBLEindentifier(char *);
+"42
+[; ;./tester.h: 42: void getBLEindentifier(char *);
 [v _getBLEindentifier `(v ~T0 @X0 0 ef1`*uc ]
-"28
-[; ;./tester.h: 28: void okAlert(void);
+"29
+[; ;./tester.h: 29: void okAlert(void);
 [v _okAlert `(v ~T0 @X0 0 ef ]
-"31
-[; ;./tester.h: 31: void attenteAquittement(_Bool *, _Bool *);
+"32
+[; ;./tester.h: 32: void attenteAquittement(_Bool *, _Bool *);
 [v _attenteAquittement `(v ~T0 @X0 0 ef2`*a`*a ]
-"4
-[; ;./tester.h: 4: void initialConditions(_Bool *, _Bool *, _Bool *, _Bool *);
+"5
+[; ;./tester.h: 5: void initialConditions(_Bool *, _Bool *, _Bool *, _Bool *);
 [v _initialConditions `(v ~T0 @X0 0 ef4`*a`*a`*a`*a ]
 "55 C:\Program Files\Microchip\xc8\v2.32\pic\include\proc\pic16lf1939.h
 [; ;C:\Program Files\Microchip\xc8\v2.32\pic\include\proc\pic16lf1939.h: 55: __asm("INDF0 equ 00h");
@@ -762,8 +762,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 100:     char orderFormWin;
 [v _orderFormWin `uc ~T0 @X0 1 a ]
 "101
-[; ;main.c: 101:     char bleCode[20];
-[v _bleCode `uc ~T0 @X0 -> 20 `i a ]
+[; ;main.c: 101:     char bleCode[20 + 1];
+[v _bleCode `uc ~T0 @X0 -> 21 `i a ]
 "106
 [; ;main.c: 106:     _delay((unsigned long)((1000)*(16000000/4000.0)));
 [e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]

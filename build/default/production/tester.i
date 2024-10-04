@@ -5796,6 +5796,7 @@ void I2C_Slave_Init();
 
 
 
+
 void initialConditions(_Bool *, _Bool *, _Bool *, _Bool *);
 void pressBP1(_Bool active);
 void pressBP2(_Bool active);
@@ -7197,10 +7198,11 @@ char getCharacterFormRx() {
     char N = 0;
     int reading;
 
-    for (int i = 8; i > 0; i--) {
+    for (int i = 7; i > -1; i--) {
 
         activeCLK();
-        reading = PORTDbits.RD3;
+        _delay((unsigned long)((10)*(16000000/4000.0)));
+        reading = PORTBbits.RB3;
         N = setCharacterBit(N, reading, i);
         _delay((unsigned long)((20)*(16000000/4000.0)));
 
@@ -7215,7 +7217,7 @@ void getBLEindentifier(char * bleCode) {
 
         bleCode[i] = getCharacterFormRx();
     }
-    bleCode[19] = "\0";
+    bleCode[20 - 1] = '\0';
     releaseCLK();
 
 }
@@ -7246,5 +7248,5 @@ void waitForBleAcq() {
     while (PORTBbits.RB3 == 0) {
     }
 
-
+    _delay((unsigned long)((40)*(16000000/4000.0)));
 }

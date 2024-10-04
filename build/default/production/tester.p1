@@ -41,8 +41,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "36 C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\string.h
 [; ;C:\Program Files\Microchip\xc8\v2.32\pic\include\c99\string.h: 36: char *strcat (char *restrict, const char *restrict);
 [v _strcat `(*uc ~T0 @X0 0 ef2`*uc`*Cuc ]
-"27 ./tester.h
-[; ;./tester.h: 27: void errorAlert(void);
+"28 ./tester.h
+[; ;./tester.h: 28: void errorAlert(void);
 [v _errorAlert `(v ~T0 @X0 0 ef ]
 "90 ./mcc_generated_files/eusart.h
 [; ;./mcc_generated_files/eusart.h: 90: extern volatile uint8_t eusartRxCount;
@@ -89,12 +89,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "4
 [; ;./I2C-tester.h: 4: char getSlaveStatus(char code);
 [v _getSlaveStatus `(uc ~T0 @X0 0 ef1`uc ]
-"34 ./tester.h
-[; ;./tester.h: 34: void processSlaveResponse(char repSlave, _Bool *);
+"35 ./tester.h
+[; ;./tester.h: 35: void processSlaveResponse(char repSlave, _Bool *);
 [v _processSlaveResponse `(v ~T0 @X0 0 ef2`uc`*a ]
-"42
-[; ;./tester.h: 42: char setCharacterBit(char N, int reading, int K);
-[v _setCharacterBit `(uc ~T0 @X0 0 ef3`uc`i`i ]
 "498 C:\Program Files\Microchip\xc8\v2.32\pic\include\proc\pic16lf1939.h
 [; ;C:\Program Files\Microchip\xc8\v2.32\pic\include\proc\pic16lf1939.h: 498:     struct {
 [s S36 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -106,6 +103,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "509
 [; ;C:\Program Files\Microchip\xc8\v2.32\pic\include\proc\pic16lf1939.h: 509: extern volatile PORTBbits_t PORTBbits __attribute__((address(0x00D)));
 [v _PORTBbits `VS35 ~T0 @X0 0 e@13 ]
+"43 ./tester.h
+[; ;./tester.h: 43: char setCharacterBit(char N, int reading, int K);
+[v _setCharacterBit `(uc ~T0 @X0 0 ef3`uc`i`i ]
 "55 C:\Program Files\Microchip\xc8\v2.32\pic\include\proc\pic16lf1939.h
 [; ;C:\Program Files\Microchip\xc8\v2.32\pic\include\proc\pic16lf1939.h: 55: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -4080,11 +4080,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;tester.c: 1294:     int reading;
 [v _reading `i ~T0 @X0 1 a ]
 "1296
-[; ;tester.c: 1296:     for (int i = 8; i > 0; i--) {
+[; ;tester.c: 1296:     for (int i = 7; i > -1; i--) {
 {
 [v _i `i ~T0 @X0 1 a ]
-[e = _i -> 8 `i ]
-[e $ > _i -> 0 `i 722  ]
+[e = _i -> 7 `i ]
+[e $ > _i -U -> 1 `i 722  ]
 [e $U 723  ]
 [e :U 722 ]
 {
@@ -4092,38 +4092,41 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;tester.c: 1298:         activeCLK();
 [e ( _activeCLK ..  ]
 "1299
-[; ;tester.c: 1299:         reading = PORTDbits.RD3;
-[e = _reading -> . . _PORTDbits 0 3 `i ]
+[; ;tester.c: 1299:         _delay((unsigned long)((10)*(16000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
 "1300
-[; ;tester.c: 1300:         N = setCharacterBit(N, reading, i);
-[e = _N ( _setCharacterBit (3 , , _N _reading _i ]
+[; ;tester.c: 1300:         reading = PORTBbits.RB3;
+[e = _reading -> . . _PORTBbits 0 3 `i ]
 "1301
-[; ;tester.c: 1301:         _delay((unsigned long)((20)*(16000000/4000.0)));
+[; ;tester.c: 1301:         N = setCharacterBit(N, reading, i);
+[e = _N ( _setCharacterBit (3 , , _N _reading _i ]
+"1302
+[; ;tester.c: 1302:         _delay((unsigned long)((20)*(16000000/4000.0)));
 [e ( __delay (1 -> * -> -> 20 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
-"1303
-[; ;tester.c: 1303:     }
+"1304
+[; ;tester.c: 1304:     }
 }
 [e -- _i -> 1 `i ]
-[e $ > _i -> 0 `i 722  ]
+[e $ > _i -U -> 1 `i 722  ]
 [e :U 723 ]
 }
-"1305
-[; ;tester.c: 1305:     return N;
+"1306
+[; ;tester.c: 1306:     return N;
 [e ) _N ]
 [e $UE 721  ]
-"1306
-[; ;tester.c: 1306: }
+"1307
+[; ;tester.c: 1307: }
 [e :UE 721 ]
 }
-"1308
-[; ;tester.c: 1308: void getBLEindentifier(char * bleCode) {
+"1309
+[; ;tester.c: 1309: void getBLEindentifier(char * bleCode) {
 [v _getBLEindentifier `(v ~T0 @X0 1 ef1`*uc ]
 {
 [e :U _getBLEindentifier ]
 [v _bleCode `*uc ~T0 @X0 1 r1 ]
 [f ]
-"1310
-[; ;tester.c: 1310:     for (int i = 0; i < 20; i++) {
+"1311
+[; ;tester.c: 1311:     for (int i = 0; i < 20; i++) {
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
@@ -4131,28 +4134,28 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 727  ]
 [e :U 726 ]
 {
-"1312
-[; ;tester.c: 1312:         bleCode[i] = getCharacterFormRx();
-[e = *U + _bleCode * -> _i `x -> -> # *U _bleCode `i `x ( _getCharacterFormRx ..  ]
 "1313
-[; ;tester.c: 1313:     }
+[; ;tester.c: 1313:         bleCode[i] = getCharacterFormRx();
+[e = *U + _bleCode * -> _i `x -> -> # *U _bleCode `i `x ( _getCharacterFormRx ..  ]
+"1314
+[; ;tester.c: 1314:     }
 }
 [e ++ _i -> 1 `i ]
 [e $ < _i -> 20 `i 726  ]
 [e :U 727 ]
 }
-"1314
-[; ;tester.c: 1314:     bleCode[19] = "\0";
-[e = *U + _bleCode * -> -> 19 `i `x -> -> # *U _bleCode `i `x -> :s 222C `uc ]
 "1315
-[; ;tester.c: 1315:     releaseCLK();
+[; ;tester.c: 1315:     bleCode[20 - 1] = '\0';
+[e = *U + _bleCode * -> - -> 20 `i -> 1 `i `x -> -> # *U _bleCode `i `x -> -> 0 `ui `uc ]
+"1316
+[; ;tester.c: 1316:     releaseCLK();
 [e ( _releaseCLK ..  ]
-"1317
-[; ;tester.c: 1317: }
+"1318
+[; ;tester.c: 1318: }
 [e :UE 725 ]
 }
-"1319
-[; ;tester.c: 1319: char setCharacterBit(char N, int reading, int K) {
+"1320
+[; ;tester.c: 1320: char setCharacterBit(char N, int reading, int K) {
 [v _setCharacterBit `(uc ~T0 @X0 1 ef3`uc`i`i ]
 {
 [e :U _setCharacterBit ]
@@ -4160,68 +4163,71 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _reading `i ~T0 @X0 1 r2 ]
 [v _K `i ~T0 @X0 1 r3 ]
 [f ]
-"1322
-[; ;tester.c: 1322:     if (reading == 1) {
+"1323
+[; ;tester.c: 1323:     if (reading == 1) {
 [e $ ! == _reading -> 1 `i 730  ]
 {
-"1324
-[; ;tester.c: 1324:         return (N = N | 1 << K);
+"1325
+[; ;tester.c: 1325:         return (N = N | 1 << K);
 [e ) = _N -> | -> _N `i << -> 1 `i _K `uc ]
 [e $UE 729  ]
-"1326
-[; ;tester.c: 1326:     }
+"1327
+[; ;tester.c: 1327:     }
 }
 [e :U 730 ]
-"1329
-[; ;tester.c: 1329:     if (reading == 0) {
+"1330
+[; ;tester.c: 1330:     if (reading == 0) {
 [e $ ! == _reading -> 0 `i 731  ]
 {
-"1331
-[; ;tester.c: 1331:         return (N = N & ~(1 << K));
+"1332
+[; ;tester.c: 1332:         return (N = N & ~(1 << K));
 [e ) = _N -> & -> _N `i ~ << -> 1 `i _K `uc ]
 [e $UE 729  ]
-"1332
-[; ;tester.c: 1332:     }
+"1333
+[; ;tester.c: 1333:     }
 }
 [e :U 731 ]
-"1335
-[; ;tester.c: 1335: }
+"1336
+[; ;tester.c: 1336: }
 [e :UE 729 ]
 }
-"1337
-[; ;tester.c: 1337: void waitForBleAcq() {
+"1338
+[; ;tester.c: 1338: void waitForBleAcq() {
 [v _waitForBleAcq `(v ~T0 @X0 1 ef ]
 {
 [e :U _waitForBleAcq ]
 [f ]
-"1339
-[; ;tester.c: 1339:     while (PORTBbits.RB3 == 1) {
+"1340
+[; ;tester.c: 1340:     while (PORTBbits.RB3 == 1) {
 [e $U 733  ]
 [e :U 734 ]
 {
-"1340
-[; ;tester.c: 1340:     }
+"1341
+[; ;tester.c: 1341:     }
 }
 [e :U 733 ]
-"1339
-[; ;tester.c: 1339:     while (PORTBbits.RB3 == 1) {
+"1340
+[; ;tester.c: 1340:     while (PORTBbits.RB3 == 1) {
 [e $ == -> . . _PORTBbits 0 3 `i -> 1 `i 734  ]
 [e :U 735 ]
-"1342
-[; ;tester.c: 1342:     while (PORTBbits.RB3 == 0) {
+"1343
+[; ;tester.c: 1343:     while (PORTBbits.RB3 == 0) {
 [e $U 736  ]
 [e :U 737 ]
 {
-"1343
-[; ;tester.c: 1343:     }
+"1344
+[; ;tester.c: 1344:     }
 }
 [e :U 736 ]
-"1342
-[; ;tester.c: 1342:     while (PORTBbits.RB3 == 0) {
+"1343
+[; ;tester.c: 1343:     while (PORTBbits.RB3 == 0) {
 [e $ == -> . . _PORTBbits 0 3 `i -> 0 `i 737  ]
 [e :U 738 ]
 "1346
-[; ;tester.c: 1346: }
+[; ;tester.c: 1346:     _delay((unsigned long)((40)*(16000000/4000.0)));
+[e ( __delay (1 -> * -> -> 40 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
+"1347
+[; ;tester.c: 1347: }
 [e :UE 732 ]
 }
 [p f _printf 9437696 ]
@@ -4394,7 +4400,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 [a 51C 45 62 32 80 82 79 71 82 65 77 77 65 84 73 79 78 32 77 79 68 85 76 69 32 50 32 84 69 82 77 73 78 69 69 13 10 0 ]
 [a 216C 45 62 32 80 82 79 71 82 65 77 77 65 84 73 79 78 32 77 79 68 85 76 69 32 50 32 84 69 82 77 73 78 69 69 13 10 0 ]
 [a 18C 45 62 32 80 82 79 71 82 65 77 77 65 84 73 79 78 32 77 79 68 85 76 69 32 49 32 84 69 82 77 73 78 69 69 13 10 0 ]
-[a 222C 0 0 ]
 [a 3C 0 ]
 [a 10C 0 ]
 [a 12C 0 ]

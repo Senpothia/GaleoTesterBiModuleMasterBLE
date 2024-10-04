@@ -5789,6 +5789,7 @@ void I2C_Slave_Init();
 
 
 
+
 void initialConditions(_Bool *, _Bool *, _Bool *, _Bool *);
 void pressBP1(_Bool active);
 void pressBP2(_Bool active);
@@ -5888,7 +5889,7 @@ void main(void) {
     char slaveSummary;
     _Bool slaveWaiting = 0;
     char orderFormWin;
-    char bleCode[20];
+    char bleCode[20 + 1];
 
 
 

@@ -1282,9 +1282,9 @@ void activeCLK() {
 }
 
 void releaseCLK() {
-    
+
     C1_SetLow();
-    __delay_ms(20);
+    __delay_ms(20); // 20->10ms
 
 }
 
@@ -1293,10 +1293,11 @@ char getCharacterFormRx() {
     char N = 0;
     int reading;
 
-    for (int i = 8; i > 0; i--) {
+    for (int i = 7; i > -1; i--) {
 
         activeCLK();
-        reading = IN4_GetValue();
+        __delay_ms(10);
+        reading = AN4_GetValue();
         N = setCharacterBit(N, reading, i);
         __delay_ms(20);
 
@@ -1307,11 +1308,11 @@ char getCharacterFormRx() {
 
 void getBLEindentifier(char * bleCode) {
 
-    for (int i = 0; i < 20; i++) {
+    for (int i = 0; i < NBRE_DIGIT_ACQ; i++) {
 
         bleCode[i] = getCharacterFormRx();
     }
-    bleCode[19] = "\0";
+    bleCode[NBRE_DIGIT_ACQ - 1] = '\0';
     releaseCLK();
 
 }
@@ -1342,5 +1343,5 @@ void waitForBleAcq() {
     while (AN4_GetValue() == 0) {
     }
 
-
+    __delay_ms(40);
 }

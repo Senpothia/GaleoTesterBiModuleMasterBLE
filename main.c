@@ -98,7 +98,7 @@ void main(void) {
     char slaveSummary;
     bool slaveWaiting = false;
     char orderFormWin;
-    char bleCode[20];
+    char bleCode[NBRE_DIGIT_ACQ + 1];
 
     // Détermination mode de fonctionnement: master/slave
     // Affichage message d'accueil
